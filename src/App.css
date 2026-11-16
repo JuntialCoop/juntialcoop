@@ -1,0 +1,87 @@
+/* Estilos globales de layout compartidos entre páginas.
+   Los estilos específicos de cada componente viven junto a su .jsx. */
+
+.page {
+  flex: 1;
+  width: 100%;
+  overflow-x: clip;
+}
+
+.main {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+.main > * {
+  flex: 1;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 860px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+.eyebrow {
+  color: var(--blue-2);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  transition: background .2s;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background: var(--blue-2);
+}
+
+.btn-ghost {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 8px;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  border-top: none;
+  border-inline: none;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+
+.btn-outline {
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 15px 28px;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  display: inline-block;
+}
+.btn-outline:hover {
+  border-color: var(--blue-2);
+}
