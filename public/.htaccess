@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Formulario de contacto -> intermediario PHP hacia Zoho CRM
+RewriteRule ^api/contact/?$ api/contact.php [L]
+
+# SPA: cualquier ruta que no sea un archivo o carpeta real la sirve index.html
+# (así al recargar /about, /Real-life-cases, etc. no sale "Not Found")
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Home from './pages/Home/Home'
 import AutomatizacionEIa from './pages/AutomatizacionEIa/AutomatizacionEIa'
 import About from './pages/About/About'
@@ -11,6 +12,7 @@ import './App.css'
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -19,6 +21,7 @@ function App() {
           <Route path="/Custom-development" element={<DesarrolloAMedida />} />
           <Route path="/automation-ai" element={<AutomatizacionEIa />} />
           <Route path="/integration-zoho-one" element={<IntegracionZohoOne />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>

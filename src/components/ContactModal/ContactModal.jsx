@@ -5,7 +5,8 @@ import './ContactModal.css'
 // Endpoint propio (mismo dominio) que reenvía a la función de Zoho CRM
 // leads_juantial_web_1. Zoho no acepta llamadas directas desde el navegador.
 // En desarrollo lo resuelve el proxy de vite.config.js (ZOHO_LEADS_URL en .env).
-const ENDPOINT = import.meta.env.VITE_CONTACT_ENDPOINT || '/api/contact'
+// En producción lo atiende api/contact.php (generado en el build).
+const ENDPOINT = '/api/contact'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE_RE = /^\+?[\d\s().-]{7,20}$/
