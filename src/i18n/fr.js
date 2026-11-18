@@ -13,6 +13,30 @@ export const fr = {
     cta: 'Parlons-en',
   },
 
+  contact: {
+    title: "Parlons-en",
+    lead: "Parlez-nous un peu de vous et de votre processus. Nous vous répondrons dès que possible.",
+    firstName: "Prénom",
+    lastName: "Nom",
+    phone: "Téléphone",
+    email: "E-mail",
+    contactHint: "Indiquez au moins un téléphone ou un e-mail pour que nous puissions vous contacter.",
+    message: "Brève description",
+    messagePlaceholder: "Qu'aimeriez-vous automatiser ou améliorer ?",
+    submit: "Envoyer",
+    sending: "Envoi...",
+    close: "Fermer",
+    successTitle: "Merci !",
+    successText: "Nous avons bien reçu votre message et vous contacterons bientôt.",
+    errors: {
+      required: "Ce champ est obligatoire.",
+      contactRequired: "Indiquez un téléphone, un e-mail ou les deux.",
+      invalidEmail: "L'e-mail n'est pas valide.",
+      invalidPhone: "Le numéro de téléphone n'est pas valide.",
+      send: "Le message n'a pas pu être envoyé. Réessayez plus tard.",
+    },
+  },
+
   footer: {
     tagline: 'Automatisation, intégrations Zoho et agents d\u2019intelligence artificielle pour les entreprises qui veulent arrêter de répéter des tâches.',
     servicesTitle: 'Services',

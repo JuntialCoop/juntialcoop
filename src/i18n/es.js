@@ -13,6 +13,30 @@ export const es = {
     cta: 'Hablemos',
   },
 
+  contact: {
+    title: "Hablemos",
+    lead: "Cuéntanos un poco sobre ti y tu proceso. Te responderemos lo antes posible.",
+    firstName: "Nombre",
+    lastName: "Apellido",
+    phone: "Teléfono",
+    email: "Correo electrónico",
+    contactHint: "Indica al menos un teléfono o un correo para poder contactarte.",
+    message: "Breve descripción",
+    messagePlaceholder: "¿Qué te gustaría automatizar o mejorar?",
+    submit: "Enviar",
+    sending: "Enviando...",
+    close: "Cerrar",
+    successTitle: "¡Gracias!",
+    successText: "Hemos recibido tu mensaje y te contactaremos pronto.",
+    errors: {
+      required: "Este campo es obligatorio.",
+      contactRequired: "Debes indicar un teléfono, un correo o ambos.",
+      invalidEmail: "El correo no es válido.",
+      invalidPhone: "El teléfono no es válido.",
+      send: "No se pudo enviar el mensaje. Inténtalo de nuevo más tarde.",
+    },
+  },
+
   footer: {
     tagline: 'Automatización, integraciones Zoho y agentes de inteligencia artificial para empresas que quieren dejar de repetir tareas.',
     servicesTitle: 'Servicios',

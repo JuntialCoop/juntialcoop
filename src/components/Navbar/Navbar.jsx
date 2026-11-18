@@ -4,10 +4,12 @@ import { LogoFull } from '../Logo/Logo'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import { useLanguage } from '../../context/LanguageContext'
+import { useContact } from '../../context/ContactContext'
 import './Navbar.css'
 
 export default function Navbar() {
   const { t } = useLanguage()
+  const { openContact } = useContact()
   const [open, setOpen] = useState(false)
 
   const links = [
@@ -38,12 +40,19 @@ export default function Navbar() {
               {l.label}
             </NavLink>
           ))}
+          <button
+            type="button"
+            className="navbar__cta navbar__cta--mobile"
+            onClick={() => { setOpen(false); openContact() }}
+          >
+            {t('nav.cta')}
+          </button>
         </nav>
 
         <div className="navbar__actions">
           <ThemeToggle />
           <LanguageSwitcher />
-          <Link to="/about" className="navbar__cta">{t('nav.cta')}</Link>
+          <button type="button" className="navbar__cta" onClick={openContact}>{t('nav.cta')}</button>
           <button
             className={`navbar__burger${open ? ' is-open' : ''}`}
             aria-label="Abrir menú"

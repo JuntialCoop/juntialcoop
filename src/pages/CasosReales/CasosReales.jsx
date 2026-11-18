@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
-import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
+import { useContact } from '../../context/ContactContext'
 import LiveLab from '../../components/LiveLab/LiveLab'
 import EvidenceShowcase from '../../components/EvidenceShowcase/EvidenceShowcase'
 import TypewriterHeading from '../../components/TypewriterHeading/TypewriterHeading'
@@ -9,6 +9,7 @@ import './CasosReales.css'
 
 export default function CasosReales() {
   const { t } = useLanguage()
+  const { openContact } = useContact()
   const [filter, setFilter] = useState('all')
 
   const hero = t('cases.hero')
@@ -82,7 +83,7 @@ export default function CasosReales() {
       <section className="container">
         <div className="cases-cta">
           <h2>{t('common.talkToUs')}</h2>
-          <Link to="/about" className="btn-primary">{t('home.ctaPrimary')}</Link>
+          <button type="button" className="btn-primary" onClick={openContact}>{t('home.ctaPrimary')}</button>
         </div>
       </section>
     </div>

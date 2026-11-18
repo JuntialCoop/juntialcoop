@@ -13,6 +13,30 @@ export const ca = {
     cta: 'Parlem-ne',
   },
 
+  contact: {
+    title: "Parlem-ne",
+    lead: "Explica'ns una mica sobre tu i el teu procés. Et respondrem al més aviat possible.",
+    firstName: "Nom",
+    lastName: "Cognom",
+    phone: "Telèfon",
+    email: "Correu electrònic",
+    contactHint: "Indica com a mínim un telèfon o un correu perquè et puguem contactar.",
+    message: "Breu descripció",
+    messagePlaceholder: "Què t'agradaria automatitzar o millorar?",
+    submit: "Enviar",
+    sending: "Enviant...",
+    close: "Tancar",
+    successTitle: "Gràcies!",
+    successText: "Hem rebut el teu missatge i et contactarem aviat.",
+    errors: {
+      required: "Aquest camp és obligatori.",
+      contactRequired: "Has d'indicar un telèfon, un correu o tots dos.",
+      invalidEmail: "El correu no és vàlid.",
+      invalidPhone: "El telèfon no és vàlid.",
+      send: "No s'ha pogut enviar el missatge. Torna-ho a provar més tard.",
+    },
+  },
+
   footer: {
     tagline: 'Automatització, integracions Zoho i agents d\u2019intel·ligència artificial per a empreses que volen deixar de repetir tasques.',
     servicesTitle: 'Serveis',

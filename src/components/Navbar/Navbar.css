@@ -74,6 +74,14 @@
   transition: background-color .2s, transform .2s;
   white-space: nowrap;
 }
+.navbar__cta {
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+.navbar__cta--mobile {
+  display: none;
+}
 .navbar__cta:hover {
   background: var(--blue-2);
   transform: translateY(-1px);
@@ -140,6 +148,10 @@
   }
   .navbar__cta {
     display: none;
+  }
+  .navbar__cta.navbar__cta--mobile {
+    display: inline-block;
+    margin: 10px 0 6px;
   }
   .navbar__burger {
     display: flex;

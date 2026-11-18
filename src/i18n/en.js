@@ -13,6 +13,30 @@ export const en = {
     cta: "Let's talk",
   },
 
+  contact: {
+    title: "Let's talk",
+    lead: "Tell us a bit about you and your process. We'll get back to you as soon as possible.",
+    firstName: "First name",
+    lastName: "Last name",
+    phone: "Phone",
+    email: "Email",
+    contactHint: "Provide at least a phone number or an email so we can reach you.",
+    message: "Short description",
+    messagePlaceholder: "What would you like to automate or improve?",
+    submit: "Send",
+    sending: "Sending...",
+    close: "Close",
+    successTitle: "Thank you!",
+    successText: "We've received your message and will be in touch soon.",
+    errors: {
+      required: "This field is required.",
+      contactRequired: "Please provide a phone number, an email, or both.",
+      invalidEmail: "The email is not valid.",
+      invalidPhone: "The phone number is not valid.",
+      send: "The message could not be sent. Please try again later.",
+    },
+  },
+
   footer: {
     tagline: 'Automation, Zoho integrations and AI agents for businesses that want to stop repeating tasks.',
     servicesTitle: 'Services',

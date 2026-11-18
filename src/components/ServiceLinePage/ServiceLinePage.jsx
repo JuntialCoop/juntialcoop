@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
+import { useContact } from '../../context/ContactContext'
 import Placeholder from '../Placeholder/Placeholder'
 import TypewriterHeading from '../TypewriterHeading/TypewriterHeading'
 import '../TypewriterHeading/TypewriterHeading.css'
@@ -12,6 +12,7 @@ import './ServiceLinePage.css'
  */
 export default function ServiceLinePage({ lineKey }) {
   const { t } = useLanguage()
+  const { openContact } = useContact()
   const line = t(`lines.${lineKey}`)
 
   return (
@@ -50,7 +51,7 @@ export default function ServiceLinePage({ lineKey }) {
       <section className="container">
         <div className="sl-cta">
           <h2>{t('common.talkToUs')}</h2>
-          <Link to="/about" className="btn-primary">{t('home.ctaPrimary')}</Link>
+          <button type="button" className="btn-primary" onClick={openContact}>{t('home.ctaPrimary')}</button>
         </div>
       </section>
     </div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
+import { useContact } from '../../context/ContactContext'
 import Placeholder from '../../components/Placeholder/Placeholder'
 import TypewriterHeading from '../../components/TypewriterHeading/TypewriterHeading'
 import '../../components/TypewriterHeading/TypewriterHeading.css'
@@ -7,6 +8,7 @@ import './About.css'
 
 export default function About() {
   const { t } = useLanguage()
+  const { openContact } = useContact()
   const steps = t('about.steps')
 
   return (
@@ -62,7 +64,7 @@ export default function About() {
         </div>
         <div className="about-steps__cta">
           <Link to="/Real-life-cases" className="btn-outline">{t('nav.cases')} →</Link>
-          <a href="#" className="btn-primary">{t('common.getStarted')}</a>
+          <button type="button" className="btn-primary" onClick={openContact}>{t('common.getStarted')}</button>
         </div>
       </section>
     </div>
