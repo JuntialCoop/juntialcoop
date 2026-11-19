@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom'
 import { LogoFull } from '../Logo/Logo'
 import { useLanguage } from '../../context/LanguageContext'
+import { useContact } from '../../context/ContactContext'
+import { company } from '../../data/company'
 import './Footer.css'
 
 export default function Footer() {
   const { t } = useLanguage()
+  const { openContact } = useContact()
+  const { address } = company
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${address.street}, ${address.postalCode} ${address.locality}, ${address.region}`)}`
   const year = new Date().getFullYear()
 
   return (
@@ -28,6 +33,18 @@ export default function Footer() {
           <Link to="/Real-life-cases">{t('nav.cases')}</Link>
         </div>
 
+        <div className="footer__col footer__contact">
+          <h4>{t('footer.contactTitle')}</h4>
+          <address>
+            <a href={mapsUrl} target="_blank" rel="noopener noreferrer">
+              {address.street}<br />
+              {address.postalCode} {address.locality} ({address.region})<br />
+              {address.country}
+            </a>
+          </address>
+          <button type="button" className="footer__contact-btn" onClick={openContact}>{t('nav.cta')} →</button>
+        </div>
+
         <div className="footer__newsletter">
           <h4>{t('footer.newsletterTitle')}</h4>
           <p>{t('footer.newsletterText')}</p>
@@ -39,7 +56,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom container">
-        <div>© {year} Juntial. {t('footer.rights')}</div>
+        <div>© {year} {company.legalName} · NIF {company.taxId}. {t('footer.rights')}</div>
         <div className="footer__legal">
           <a href="#">{t('footer.legal')}</a>
           <a href="#">{t('footer.privacy')}</a>

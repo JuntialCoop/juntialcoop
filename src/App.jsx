@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import RouteMeta from './components/RouteMeta/RouteMeta'
 import Home from './pages/Home/Home'
 import AutomatizacionEIa from './pages/AutomatizacionEIa/AutomatizacionEIa'
 import About from './pages/About/About'
@@ -13,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <RouteMeta />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
