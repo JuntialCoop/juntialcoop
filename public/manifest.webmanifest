@@ -1,0 +1,34 @@
+{
+  "name": "Juntial — Automatización e IA",
+  "short_name": "Juntial",
+  "description": "Automatización, inteligencia artificial e integración Zoho One para empresas.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "es",
+  "background_color": "#F5F7FC",
+  "theme_color": "#FFFFFF",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Hablemos",
+      "short_name": "Hablemos",
+      "description": "Escríbenos y te contactamos",
+      "url": "/?contacto=1",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Casos reales",
+      "short_name": "Casos",
+      "url": "/Real-life-cases",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

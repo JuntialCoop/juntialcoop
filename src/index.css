@@ -56,6 +56,28 @@
   box-sizing: border-box;
 }
 
+/* ---------- Modo app en móviles ---------- */
+:root {
+  --tabbar-h: 64px;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+@media (max-width: 860px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+  body {
+    /* deja sitio para la barra de pestañas inferior */
+    padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+    overscroll-behavior-y: none;
+  }
+}
+
 body {
   margin: 0;
   background: var(--surface);

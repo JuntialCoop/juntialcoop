@@ -11,6 +11,10 @@ export const es = {
     cases: 'Casos Reales',
     about: 'Nosotros',
     cta: 'Hablemos',
+    tabsLabel: "Navegación principal",
+    tabServices: "Servicios",
+    tabCases: "Casos",
+    servicesSheetTitle: "Nuestros servicios",
   },
 
   contact: {

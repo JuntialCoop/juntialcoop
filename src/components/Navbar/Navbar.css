@@ -157,3 +157,30 @@
     display: flex;
   }
 }
+
+/* ---------- Móvil: barra superior compacta tipo app ----------
+   La navegación pasa a la barra de pestañas inferior (MobileTabBar). */
+@media (max-width: 860px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar__inner,
+  .navbar__inner:has(.navbar__links.is-open) {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    box-shadow: none;
+    padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .navbar__links,
+  .navbar__burger,
+  .navbar__cta,
+  .navbar__cta.navbar__cta--mobile {
+    display: none;
+  }
+  .navbar__actions {
+    gap: 8px;
+  }
+}

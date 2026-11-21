@@ -1,0 +1,183 @@
+/* Solo en móviles: ver el media query de abajo */
+.tabbar {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .tabbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: end;
+    height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+    padding: 0 6px env(safe-area-inset-bottom);
+    background: color-mix(in srgb, var(--surface-2) 90%, transparent);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 24px -14px rgba(0, 0, 0, 0.35);
+  }
+
+  .tabbar__item {
+    position: relative;
+    isolation: isolate;
+    height: var(--tabbar-h);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 0 2px;
+    border: none;
+    background: none;
+    color: var(--text-dim);
+    font: 500 11px/1.2 var(--sans);
+    letter-spacing: 0;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: color .2s ease;
+  }
+  .tabbar__item span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .tabbar__item svg {
+    transition: transform .2s ease;
+  }
+  .tabbar__item:active svg {
+    transform: scale(.88);
+  }
+  .tabbar__item.is-active {
+    color: var(--blue-2);
+    font-weight: 600;
+  }
+  /* indicador tipo "píldora" detrás del icono activo */
+  .tabbar__item.is-active::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 52px;
+    height: 30px;
+    border-radius: 999px;
+    background: var(--blue-tint);
+    z-index: -1;
+    animation: tab-pill .25s ease;
+  }
+
+  /* Botón central "Hablemos" destacado */
+  .tabbar__talk {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .tabbar__talk-bubble {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-top: -26px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    box-shadow: 0 8px 20px -6px rgba(46, 92, 255, 0.7), 0 0 0 5px var(--surface-2);
+    transition: transform .2s ease, background-color .2s ease;
+  }
+  .tabbar__talk:active .tabbar__talk-bubble {
+    transform: scale(.92);
+    background: var(--blue-2);
+  }
+  .tabbar__talk:active svg {
+    transform: none;
+  }
+
+  @keyframes tab-pill {
+    from { transform: scaleX(.4); opacity: 0; }
+    to { transform: scaleX(1); opacity: 1; }
+  }
+}
+
+/* Lista de servicios dentro de la hoja inferior */
+.svc-list {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.svc-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color .2s, background-color .2s, transform .15s;
+}
+.svc-item:active {
+  transform: scale(.98);
+}
+.svc-item.is-active {
+  border-color: var(--blue);
+  background: var(--blue-tint);
+}
+.svc-item__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--blue);
+  color: #fff;
+}
+.svc-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.svc-item__text strong {
+  font-family: var(--heading);
+  font-size: 16px;
+  font-weight: 600;
+}
+.svc-item__text small {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+.svc-item__chev {
+  margin-left: auto;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.svc-cta {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 14px;
+  background: var(--blue);
+  color: #fff;
+  font: 600 15px var(--sans);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.svc-cta:active {
+  background: var(--blue-2);
+}
