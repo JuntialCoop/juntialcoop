@@ -140,6 +140,7 @@ export const ca = {
 
   lines: {
     dev: {
+      bannerAlt: "Desenvolupament a mida, del codi al procés: desenvolupament web, consum d'API i integracions, connectant una aplicació web, una API OAuth 2.0 i un flux automatitzat.",
       key: 'custom-development',
       eyebrow: '01 · Línia de servei',
       title: 'Desenvolupament a Mida',
@@ -168,6 +169,7 @@ export const ca = {
       ],
     },
     automation: {
+      bannerAlt: "Automatització i IA que treballa per tu: agents IA, servidors MCP i automatització amb Make, amb un agent que agenda cites i un escenari que connecta webhook, HTTP i CRM.",
       key: 'automatizacion-e-ia',
       eyebrow: '02 · Línia de servei',
       title: 'Automatització i Intel·ligència Artificial',
@@ -192,6 +194,7 @@ export const ca = {
       note: 'Aquests tres serveis es combinen sovint: un agent d\u2019IA sol recolzar-se en un servidor MCP i en escenaris d\u2019automatització per completar el flux de principi a fi. A la secció de Casos d\u2019ús reals es mostren exemples concrets d\u2019aquesta combinació.',
     },
     zoho: {
+      bannerAlt: "Zoho One, fet a la teua mida: personalització, integracions i desenvolupament connectant CRM, Books, Creator, Analytics, Desk, Sign, Forms i WorkDrive.",
       key: 'integration-zoho-one',
       eyebrow: '03 · Línia de servei',
       title: 'Integració Zoho One',

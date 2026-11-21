@@ -140,6 +140,7 @@ export const fr = {
 
   lines: {
     dev: {
+      bannerAlt: "Développement sur mesure, du code au processus : développement web, consommation d'API et intégrations, reliant une application web, une API OAuth 2.0 et un flux automatisé.",
       key: 'custom-development',
       eyebrow: '01 · Ligne de service',
       title: 'Développement sur Mesure',
@@ -168,6 +169,7 @@ export const fr = {
       ],
     },
     automation: {
+      bannerAlt: "Automatisation et IA qui travaillent pour vous : agents IA, serveurs MCP et automatisation Make, avec un agent qui prend des rendez-vous et un scénario reliant webhook, HTTP et CRM.",
       key: 'automatizacion-e-ia',
       eyebrow: '02 · Ligne de service',
       title: 'Automatisation et Intelligence Artificielle',
@@ -192,6 +194,7 @@ export const fr = {
       note: 'Ces trois services sont fréquemment combinés : un agent IA s\u2019appuie généralement sur un serveur MCP et des scénarios d\u2019automatisation pour compléter le flux de bout en bout. La section Cas d\u2019usage réels présente des exemples concrets de cette combinaison.',
     },
     zoho: {
+      bannerAlt: "Zoho One, sur mesure : personnalisation, intégrations et développement reliant CRM, Books, Creator, Analytics, Desk, Sign, Forms et WorkDrive.",
       key: 'integration-zoho-one',
       eyebrow: '03 · Ligne de service',
       title: 'Intégration Zoho One',

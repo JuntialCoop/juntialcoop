@@ -17,6 +17,20 @@
   padding: 0 48px 64px;
 }
 
+.sl-banner {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 60px -28px rgba(10, 14, 20, 0.55);
+  background: #0A0E14;
+}
+.sl-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .sl-services {
   padding: 0 48px 80px;
   border-top: 1px solid var(--line);

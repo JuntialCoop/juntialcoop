@@ -140,6 +140,7 @@ export const en = {
 
   lines: {
     dev: {
+      bannerAlt: "Custom development, from code to process: web development, API consumption and integrations, with a web app, an OAuth 2.0 API and an automated flow connected.",
       key: 'custom-development',
       eyebrow: '01 · Service line',
       title: 'Custom Development',
@@ -168,6 +169,7 @@ export const en = {
       ],
     },
     automation: {
+      bannerAlt: "Automation and AI that works for you: AI agents, MCP servers and Make automation, with an agent that books appointments and a scenario connecting webhook, HTTP and CRM.",
       key: 'automatizacion-e-ia',
       eyebrow: '02 · Service line',
       title: 'Automation & Artificial Intelligence',
@@ -192,6 +194,7 @@ export const en = {
       note: 'These three services are frequently combined: an AI agent usually relies on an MCP server and automation scenarios to complete the flow from start to finish. The Real use cases section shows concrete examples of this combination.',
     },
     zoho: {
+      bannerAlt: "Zoho One, tailored to you: customisation, integrations and development connecting CRM, Books, Creator, Analytics, Desk, Sign, Forms and WorkDrive.",
       key: 'integration-zoho-one',
       eyebrow: '03 · Service line',
       title: 'Zoho One Integration',

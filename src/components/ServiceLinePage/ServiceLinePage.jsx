@@ -8,8 +8,10 @@ import './ServiceLinePage.css'
  * Plantilla compartida por las tres líneas de servicio:
  * Desarrollo a Medida, Automatización e IA, Integración Zoho One.
  * lineKey: 'dev' | 'automation' | 'zoho'
+ * banner (opcional): imagen ancha bajo la cabecera; su texto alternativo
+ * se toma de lines.<lineKey>.bannerAlt.
  */
-export default function ServiceLinePage({ lineKey }) {
+export default function ServiceLinePage({ lineKey, banner }) {
   const { t } = useLanguage()
   const { openContact } = useContact()
   const line = t(`lines.${lineKey}`)
@@ -21,6 +23,14 @@ export default function ServiceLinePage({ lineKey }) {
         <TypewriterHeading text={line.title} key={lineKey + line.title} />
         <p className="sl-hero__intro">{line.intro}</p>
       </section>
+
+      {banner && (
+        <section className="sl-media container">
+          <figure className="sl-banner">
+            <img src={banner} alt={line.bannerAlt || line.title} width="1920" height="800" decoding="async" />
+          </figure>
+        </section>
+      )}
 
       <section className="sl-services container">
         <div className="sl-services__label">{t('common.servicesInLine')}</div>
