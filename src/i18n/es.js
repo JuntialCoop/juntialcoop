@@ -357,6 +357,7 @@ export const es = {
   },
 
   about: {
+    bannerAlt: "Juntamos personas, procesos y tecnología: equipo, clientes, datos, herramientas y procesos conectados alrededor de Juntial.",
     eyebrow: 'Quiénes somos',
     title: 'Juntial nace de una idea sencilla',
     lead: 'La mayoría de empresas no necesitan más aplicaciones: necesitan que las que ya tienen hablen entre sí.',

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import { useContact } from '../../context/ContactContext'
-import Placeholder from '../../components/Placeholder/Placeholder'
 import TypewriterHeading from '../../components/TypewriterHeading/TypewriterHeading'
 import '../../components/TypewriterHeading/TypewriterHeading.css'
+import aboutBanner from '../../assets/about-banner.png'
 import './About.css'
 
 export default function About() {
@@ -24,7 +24,16 @@ export default function About() {
           <p>{t('about.body1')}</p>
           <p>{t('about.body2')}</p>
         </div>
-        <Placeholder type="photo" ratio="4/3" />
+        <figure className="about-body__banner">
+          <img
+            src={aboutBanner}
+            alt={t('about.bannerAlt')}
+            width="1920"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
       </section>
 
       <section className="about-grid container">
@@ -35,16 +44,6 @@ export default function About() {
         <div className="about-grid__card">
           <h3>{t('about.whoTitle')}</h3>
           <p>{t('about.whoBody')}</p>
-        </div>
-      </section>
-
-      <section className="about-team container">
-        <div className="eyebrow">{t('about.teamEyebrow')}</div>
-        <h2>{t('about.teamTitle')}</h2>
-        <div className="about-team__grid">
-          <Placeholder type="photo" ratio="1/1" />
-          <Placeholder type="photo" ratio="1/1" />
-          <Placeholder type="photo" ratio="1/1" />
         </div>
       </section>
 

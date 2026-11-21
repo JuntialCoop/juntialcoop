@@ -357,6 +357,7 @@ export const ca = {
   },
 
   about: {
+    bannerAlt: "Unim persones, processos i tecnologia: equip, clients, dades, eines i processos connectats al voltant de Juntial.",
     eyebrow: 'Qui som',
     title: 'Juntial neix d\u2019una idea senzilla',
     lead: 'La majoria d\u2019empreses no necessiten més aplicacions: necessiten que les que ja tenen es parlin entre elles.',

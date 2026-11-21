@@ -357,6 +357,7 @@ export const en = {
   },
 
   about: {
+    bannerAlt: "We bring together people, processes and technology: team, customers, data, tools and processes connected around Juntial.",
     eyebrow: 'Who we are',
     title: 'Juntial was born from a simple idea',
     lead: 'Most companies don\u2019t need more applications: they need the ones they already have to talk to each other.',

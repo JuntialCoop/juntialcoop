@@ -1,6 +1,5 @@
 import { useLanguage } from '../../context/LanguageContext'
 import { useContact } from '../../context/ContactContext'
-import Placeholder from '../Placeholder/Placeholder'
 import TypewriterHeading from '../TypewriterHeading/TypewriterHeading'
 import '../TypewriterHeading/TypewriterHeading.css'
 import './ServiceLinePage.css'
@@ -21,10 +20,6 @@ export default function ServiceLinePage({ lineKey }) {
         <div className="eyebrow">{line.eyebrow}</div>
         <TypewriterHeading text={line.title} key={lineKey + line.title} />
         <p className="sl-hero__intro">{line.intro}</p>
-      </section>
-
-      <section className="sl-media container">
-        <Placeholder type="process" ratio="21/9" />
       </section>
 
       <section className="sl-services container">

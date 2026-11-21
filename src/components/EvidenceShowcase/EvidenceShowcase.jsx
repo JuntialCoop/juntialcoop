@@ -5,7 +5,6 @@ import FlowDiagram from '../FlowDiagram/FlowDiagram'
 import CodeCard from '../CodeCard/CodeCard'
 import VideoPlayer from '../VideoPlayer/VideoPlayer'
 import MediaGallery from '../MediaGallery/MediaGallery'
-import Placeholder from '../Placeholder/Placeholder'
 import './EvidenceShowcase.css'
 
 const CODE_LABEL = { js: 'Node.js', deluge: 'Deluge', json: 'JSON' }
@@ -39,8 +38,9 @@ export default function EvidenceShowcase() {
   const tabs = [
     { key: 'flow', label: copy.tabs.flow },
     cfg.code && { key: 'code', label: copy.tabs.code },
-    { key: 'video', label: copy.tabs.video },
-    { key: 'shots', label: copy.tabs.shots },
+    // Vídeo y Capturas solo aparecen cuando el caso tiene material subido.
+    (video || youtube) && { key: 'video', label: copy.tabs.video },
+    shots.length > 0 && { key: 'shots', label: copy.tabs.shots },
   ].filter(Boolean)
 
   function select(i) {
@@ -120,20 +120,16 @@ export default function EvidenceShowcase() {
                   label={CODE_LABEL[cfg.code.lang]}
                 />
               )}
-              {tab === 'video' &&
-                (video || youtube ? (
-                  <VideoPlayer
-                    src={video?.src}
-                    poster={video?.poster}
-                    youtube={youtube}
-                    title={text.title}
-                    badge={copy.badge[cfg.status]}
-                  />
-                ) : (
-                  <Placeholder type="video" ratio="16/9" />
-                ))}
-              {tab === 'shots' &&
-                (shots.length > 0 ? <MediaGallery images={shots} /> : <Placeholder type="photo" ratio="16/9" />)}
+              {tab === 'video' && (video || youtube) && (
+                <VideoPlayer
+                  src={video?.src}
+                  poster={video?.poster}
+                  youtube={youtube}
+                  title={text.title}
+                  badge={copy.badge[cfg.status]}
+                />
+              )}
+              {tab === 'shots' && shots.length > 0 && <MediaGallery images={shots} />}
             </div>
 
             <footer className="ev__foot">
