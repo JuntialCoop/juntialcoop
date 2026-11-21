@@ -124,6 +124,40 @@
   color: #E5484D;
 }
 
+.contact-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+}
+.contact-consent input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  flex-shrink: 0;
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+.contact-consent a {
+  color: var(--blue-2);
+}
+.contact-consent.has-error span {
+  color: #E5484D;
+}
+
+.contact-modal__legal {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+.contact-modal__legal strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .contact-modal__actions {
   display: flex;
   justify-content: flex-end;

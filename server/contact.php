@@ -40,7 +40,14 @@ $payload = [
   'phone'     => $field('phone', 30),
   'email'     => $field('email', 150),
   'message'   => $field('message', 5000),
+  // Prueba del consentimiento RGPD: fecha y hora del servidor (UTC).
+  'privacyAccepted' => true,
+  'consentDate'     => gmdate('c'),
 ];
+
+if (!isset($in['privacyAccepted']) || $in['privacyAccepted'] !== true) {
+  respond(422, ['status' => 'error', 'message' => 'Privacy policy must be accepted']);
+}
 
 if ($payload['firstName'] === '' || ($payload['phone'] === '' && $payload['email'] === '')) {
   respond(422, ['status' => 'error', 'message' => 'firstName and phone or email are required']);

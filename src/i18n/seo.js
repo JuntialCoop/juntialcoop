@@ -26,6 +26,18 @@ export const seo = {
       title: 'Quiénes somos | Juntial, cooperativa de automatización e IA',
       description: 'Juntial, Coop. V. es una cooperativa de Cox (Alicante) que diseña e integra automatización e inteligencia artificial a medida para pymes.',
     },
+    '/aviso-legal': {
+      title: 'Aviso legal | Juntial',
+      description: 'Aviso legal de JUNTIAL, COOP. V. (NIF F93988400): datos del titular, condiciones de uso, propiedad intelectual y legislación aplicable.',
+    },
+    '/politica-privacidad': {
+      title: 'Política de privacidad | Juntial',
+      description: 'Cómo trata JUNTIAL, COOP. V. tus datos personales: responsable, finalidades, base jurídica, conservación, destinatarios y tus derechos RGPD.',
+    },
+    '/politica-cookies': {
+      title: 'Política de cookies | Juntial',
+      description: 'Qué cookies y tecnologías similares utiliza juntial.es: solo preferencias técnicas de idioma y tema, sin cookies de análisis ni publicidad.',
+    },
   },
   en: {
     '/': {
@@ -51,6 +63,18 @@ export const seo = {
     '/about': {
       title: 'About us | Juntial, automation and AI cooperative',
       description: 'Juntial, Coop. V. is a cooperative from Cox (Alicante, Spain) that designs and integrates custom automation and artificial intelligence for SMEs.',
+    },
+    '/aviso-legal': {
+      title: 'Legal notice | Juntial',
+      description: 'Legal notice of JUNTIAL, COOP. V. (Tax ID F93988400): owner details, terms of use, intellectual property and governing law.',
+    },
+    '/politica-privacidad': {
+      title: 'Privacy policy | Juntial',
+      description: 'How JUNTIAL, COOP. V. processes your personal data: controller, purposes, legal basis, retention, recipients and your GDPR rights.',
+    },
+    '/politica-cookies': {
+      title: 'Cookie policy | Juntial',
+      description: 'Which cookies and similar technologies juntial.es uses: only technical language and theme preferences, no analytics or advertising cookies.',
     },
   },
   fr: {
@@ -78,6 +102,18 @@ export const seo = {
       title: 'Qui sommes-nous | Juntial, coopérative d\'automatisation et d\'IA',
       description: 'Juntial, Coop. V. est une coopérative de Cox (Alicante, Espagne) qui conçoit et intègre l\'automatisation et l\'IA sur mesure pour les PME.',
     },
+    '/aviso-legal': {
+      title: 'Aviso legal | Juntial',
+      description: 'Aviso legal de JUNTIAL, COOP. V. (NIF F93988400): datos del titular, condiciones de uso, propiedad intelectual y legislación aplicable.',
+    },
+    '/politica-privacidad': {
+      title: 'Política de privacidad | Juntial',
+      description: 'Cómo trata JUNTIAL, COOP. V. tus datos personales: responsable, finalidades, base jurídica, conservación, destinatarios y tus derechos RGPD.',
+    },
+    '/politica-cookies': {
+      title: 'Política de cookies | Juntial',
+      description: 'Qué cookies y tecnologías similares utiliza juntial.es: solo preferencias técnicas de idioma y tema, sin cookies de análisis ni publicidad.',
+    },
   },
   ca: {
     '/': {
@@ -103,6 +139,18 @@ export const seo = {
     '/about': {
       title: 'Qui som | Juntial, cooperativa d\'automatització i IA',
       description: 'Juntial, Coop. V. és una cooperativa de Cox (Alacant) que dissenya i integra automatització i intel·ligència artificial a mida per a pimes.',
+    },
+    '/aviso-legal': {
+      title: 'Aviso legal | Juntial',
+      description: 'Aviso legal de JUNTIAL, COOP. V. (NIF F93988400): datos del titular, condiciones de uso, propiedad intelectual y legislación aplicable.',
+    },
+    '/politica-privacidad': {
+      title: 'Política de privacidad | Juntial',
+      description: 'Cómo trata JUNTIAL, COOP. V. tus datos personales: responsable, finalidades, base jurídica, conservación, destinatarios y tus derechos RGPD.',
+    },
+    '/politica-cookies': {
+      title: 'Política de cookies | Juntial',
+      description: 'Qué cookies y tecnologías similares utiliza juntial.es: solo preferencias técnicas de idioma y tema, sin cookies de análisis ni publicidad.',
     },
   },
 }

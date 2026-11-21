@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { LogoFull } from '../Logo/Logo'
 import { useLanguage } from '../../context/LanguageContext'
 import { useContact } from '../../context/ContactContext'
-import { company } from '../../data/company'
+import { company, legalRoutes } from '../../data/company'
 import './Footer.css'
 
 export default function Footer() {
@@ -42,6 +42,7 @@ export default function Footer() {
               {address.country}
             </a>
           </address>
+          <a href={`mailto:${company.email}`}>{company.email}</a>
           <button type="button" className="footer__contact-btn" onClick={openContact}>{t('nav.cta')} →</button>
         </div>
 
@@ -58,9 +59,9 @@ export default function Footer() {
       <div className="footer__bottom container">
         <div>© {year} {company.legalName} · NIF {company.taxId}. {t('footer.rights')}</div>
         <div className="footer__legal">
-          <a href="#">{t('footer.legal')}</a>
-          <a href="#">{t('footer.privacy')}</a>
-          <a href="#">{t('footer.cookies')}</a>
+          <Link to={legalRoutes.legal}>{t('footer.legal')}</Link>
+          <Link to={legalRoutes.privacy}>{t('footer.privacy')}</Link>
+          <Link to={legalRoutes.cookies}>{t('footer.cookies')}</Link>
         </div>
       </div>
     </footer>

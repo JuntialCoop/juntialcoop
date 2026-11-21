@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
+import { company, legalRoutes } from '../../data/company'
 import './ContactModal.css'
 
 // Endpoint propio (mismo dominio) que reenvía a la función de Zoho CRM
@@ -11,7 +12,7 @@ const ENDPOINT = '/api/contact'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE_RE = /^\+?[\d\s().-]{7,20}$/
 
-const EMPTY = { firstName: '', lastName: '', phone: '', email: '', message: '' }
+const EMPTY = { firstName: '', lastName: '', phone: '', email: '', message: '', privacy: false }
 
 function validate(values) {
   const errors = {}
@@ -24,6 +25,7 @@ function validate(values) {
   }
   if (email && !EMAIL_RE.test(email)) errors.email = 'invalidEmail'
   if (phone && !PHONE_RE.test(phone)) errors.phone = 'invalidPhone'
+  if (!values.privacy) errors.privacy = 'privacyRequired'
   return errors
 }
 
@@ -48,7 +50,8 @@ export default function ContactModal({ onClose }) {
   }, [onClose])
 
   const handleChange = (e) => {
-    const next = { ...values, [e.target.name]: e.target.value }
+    const { name, type, checked, value } = e.target
+    const next = { ...values, [name]: type === 'checkbox' ? checked : value }
     setValues(next)
     if (submitted) setErrors(validate(next))
   }
@@ -60,9 +63,16 @@ export default function ContactModal({ onClose }) {
     setErrors(errs)
     if (Object.keys(errs).length) return
 
-    const payload = Object.fromEntries(
-      Object.entries(values).map(([k, v]) => [k, v.trim()]),
-    )
+    // Se guarda la aceptación de la política y su fecha como prueba del consentimiento (RGPD).
+    const payload = {
+      firstName: values.firstName.trim(),
+      lastName: values.lastName.trim(),
+      phone: values.phone.trim(),
+      email: values.email.trim(),
+      message: values.message.trim(),
+      privacyAccepted: true,
+      consentDate: new Date().toISOString(),
+    }
 
     setStatus('sending')
     try {
@@ -168,6 +178,25 @@ export default function ContactModal({ onClose }) {
                   placeholder={t('contact.messagePlaceholder')}
                 />
               </label>
+
+              <label className={`contact-consent${errors.privacy ? ' has-error' : ''}`}>
+                <input
+                  type="checkbox"
+                  name="privacy"
+                  checked={values.privacy}
+                  onChange={handleChange}
+                  aria-invalid={!!errors.privacy}
+                />
+                <span>
+                  {t('contact.privacyAccept')}{' '}
+                  <a href={legalRoutes.privacy} target="_blank" rel="noopener noreferrer">{t('contact.privacyLink')}</a>. *
+                </span>
+              </label>
+              {err('privacy') && <p className="contact-modal__hint is-error">{err('privacy')}</p>}
+
+              <p className="contact-modal__legal">
+                <strong>{t('contact.infoTitle')}</strong> {t('contact.infoText').replace('{company}', company.legalName).replace('{email}', company.email)}
+              </p>
 
               {status === 'error' && <p className="contact-modal__hint is-error">{t('contact.errors.send')}</p>}
 
