@@ -1,11 +1,12 @@
-// Icono hexagonal facetado de Juntial, replicado del logo oficial.
+// Isotipo oficial de Juntial: cuatro barras facetadas en anillo hexagonal con punto azul central.
 export function LogoMark({ size = 30 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true">
-      <polygon points="50,3 90,25 90,75 50,97 10,75 10,25" fill="var(--facet-1)" />
-      <polygon points="50,3 90,25 50,50 10,25" fill="var(--facet-2)" opacity="0.6" />
-      <polygon points="10,25 50,50 50,97 10,75" fill="var(--facet-2)" />
-      <circle cx="50" cy="45" r="16" fill="var(--blue)" />
+    <svg width={size} height={size} viewBox="195 205 773 773" aria-hidden="true">
+      <polygon points="480,215 850,325 720,455 350,348" fill="var(--logo-a)" />
+      <polygon points="850,325 958,692 826,826 720,455" fill="var(--logo-b)" />
+      <polygon points="800,848 683,968 312,860 430,742" fill="var(--logo-b)" />
+      <polygon points="322,374 430,742 312,860 205,490" fill="var(--logo-a)" />
+      <circle cx="582" cy="592" r="101" fill="var(--blue)" />
     </svg>
   )
 }

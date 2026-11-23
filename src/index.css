@@ -13,6 +13,8 @@
   --text-on-blue: #FFFFFF;
   --facet-1: #C9CFDB;
   --facet-2: #E4E8F1;
+  --logo-a: #2A2E36;
+  --logo-b: #0F1014;
   --shadow: rgba(10, 14, 20, 0.08) 0 8px 24px -8px;
 
   --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -48,6 +50,8 @@
   --text-on-blue: #FFFFFF;
   --facet-1: #3D4148;
   --facet-2: #1C1F26;
+  --logo-a: #C9CFDB;
+  --logo-b: #8B94A7;
   --shadow: rgba(0, 0, 0, 0.4) 0 8px 24px -8px;
   color-scheme: dark;
 }

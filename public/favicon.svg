@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <polygon points="50,3 90,25 90,75 50,97 10,75 10,25" fill="#3D4148"/>
-  <polygon points="50,3 90,25 50,50 10,25" fill="#565A63"/>
-  <polygon points="10,25 50,50 50,97 10,75" fill="#1C1F26"/>
-  <circle cx="50" cy="45" r="16" fill="#2E5CFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="195 205 773 773">
+  <polygon points="480,215 850,325 720,455 350,348" fill="#2A2E36"/>
+  <polygon points="850,325 958,692 826,826 720,455" fill="#0F1014"/>
+  <polygon points="800,848 683,968 312,860 430,742" fill="#0F1014"/>
+  <polygon points="322,374 430,742 312,860 205,490" fill="#2A2E36"/>
+  <circle cx="582" cy="592" r="101" fill="#2E5CFF"/>
 </svg>
